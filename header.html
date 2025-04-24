@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: aquamarine;
+        padding: 30px;
+        border-bottom: 2px solid black;
+    }
+    .saqib{
+        display: flex;
+        align-items: center;
+    }
+    .nav a{
+        text-decoration: none;
+        font-size: 25px;
+
+    }
+    .nav a{
+     margin-left: 30px;
+     padding: 5px;
+    }
+    .nav a:hover{
+     background-color: antiquewhite;
+     border-radius: 4px;
+    }
+    .saqib h1{
+        margin-left: 10px;
+        
+    }
+    .banner{
+        display: flex;
+        justify-content: space-between;
+        margin: 80px 120px 20px 120px;
+       
+    }
+    .banner-content p{
+    margin-bottom: 25px;
+    }
+    .icons i{
+        gap: 10px;
+        padding: 10px;
+    }
+    .icons i:hover{
+        background-color: chocolate;
+        border-radius: 50%;
+        color: antiquewhite;
+    }
+    .aa{
+        text-align: center;
+        margin-bottom: 20px;
+        text-decoration: dashed;
+    }
+    .courses{
+        display: flex;
+        justify-content: space-around;
+        margin: 0 85px 0 85px;
+
+    }
+    .card{
+        background-color: pink;
+        width: 300px;
+        height: auto;
+        border: 2px solid rgb(49, 40, 40);
+        padding: 10px;
+        text-align: center;
+        border-radius: 15px;
+    }
+    .card img{
+        width: 120px;
+        height: 120px;
+        margin-top: 20px;
+    }
+    .card p{
+        margin-bottom: 8px;
+        margin-top: 20px;
+    }
+    .card button{
+        padding: 5px 25px 5px 25px;
+    
+        
+        background-color: aqua;
+        border-radius: 20px;
+    }
+    .card button a{
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+    
+</style>
+<body>
+    <header>
+        <div class="saqib">
+            <img src="sss.png" style="width: 80px; height: 80px;">
+            <h1>saqib khan</h1>
+        </div>
+        <div class="nav">
+            <a href="">home</a>
+            <a href="">gallery</a>
+            <a href="#courses">courses</a>
+            <a href="#about">about us</a>
+        </div>
+    </header>
+       <main>
+        <section class="banner">
+            <div class="banner-content">
+                <h1 style="background-color: aquamarine; font-size: xx-large;">Sahil shah</h1>
+                <p style="width: 400px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam nesciunt tenetur provident ipsam pariatur numquam repellendus, maiores, quos quidem laudantium modi ipsum, obcaecati blanditiis quis itaque cumque corrupti animi. Deserunt, molestias voluptate. Facere quidem cupiditate commodi, suscipit veritatis numquam? Quo.</p>
+                <div class="icons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div>
+                <img src="pngwing.com (4).png" width="100%" height="auto">
+            </div>
+        </section>
+        <section class="about" id="about">
+            <h1 style="text-align: center;">About</h1>
+            <div class="about-content" style="display: flex; border: 2px solid black; padding: 50px 50px 30px 50px; margin: 20px 115px 20px 115px; border-radius: 10px;">
+                <img src="abc.png" alt="" style="width: 100px; height: 100px;">
+                <p style="width: 800px; padding: 20px 100px 20px 50px; ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Ipsam autem eligendi aliquid? Nostrum id natus, eum nobis magnam dolore, enim magni minima minus quibusdam aperiam molestias ex, iste explicabo corporis?</p>
+            </div>
+        </section>
+        <h1 class="aa" id="courses">courses</h1>
+        <section class="courses" id="courses">
+            <div class="card">
+                <h1>digital marketing</h1>
+                <img src="abc.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptate fuga placeat quidem, aspernatur dolorem error! Culpa, voluptates. Illum sint culpa natus autem quasi dignissimos odio explicabo, laborum eaque deleniti?</p>
+                <button><a href="#">Read more</a></button>
+            </div>
+            <div class="card">
+                <h1>Freelancing</h1>
+                <img src="abc.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptate fuga placeat quidem, aspernatur dolorem error! Culpa, voluptates. Illum sint culpa natus autem quasi dignissimos odio explicabo, laborum eaque deleniti?</p>
+                <button><a href="#">Read more</a></button>
+
+            </div>
+            <div class="card">
+                <h1>web development</h1>
+                <img src="abc.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptate fuga placeat quidem, aspernatur dolorem error! Culpa, voluptates. Illum sint culpa natus autem quasi dignissimos odio explicabo, laborum eaque deleniti?</p>
+                <button><a href="#">Read more</a></button>
+            </div>
+        </section>
+       </main>
+</body>
+</html>

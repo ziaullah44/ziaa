@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Infinite Animations</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h2 {
+            text-decoration: underline;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        /* 1. Button Hover Animation */
+        .animated-button {
+            background-color: #6b0a11;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .animated-button:hover {
+            background-color: #662b2f;
+            transform: scale(1.1);
+        }
+
+        /* 2. Bouncing Animation (Infinite) */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .bounce {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            animation: bounce 1s infinite;
+        }
+
+        /* 3. Fade-In Effect (Infinite Loop) */
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+        .fade-in {
+            font-size: 22px;
+            color: #007bff;
+            animation: fadeInOut 3s infinite;
+        }
+
+        /* 4. Rotating Animation (Infinite) */
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .rotate {
+            width: 50px;
+            height: 50px;
+            background-color: #28a745;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            animation: rotate 2s linear infinite;
+        }
+
+        /* 5. Typing Text Animation */
+        .typing-container {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 22px;
+    font-weight: bold;
+    border-right: 2px solid black;
+    width: 0;
+    animation: typing 4s steps(30) infinite, blink 0.7s infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+    0% { width: 0; }
+    25% { width: 24ch; } 
+    50% { width: 23ch; }
+    75% { width: 0; }
+    100% { width: 0; }
+}
+
+/* Cursor blinking */
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Loop through different courses */
+.typing-container::after {
+    content: "Digital Marketing";
+    animation: changeText 12s infinite;
+}
+
+@keyframes changeText {
+    0%, 33% { content: "Digital Marketing"; }
+    34%, 66% { content: "Web Development"; }
+    67%, 100% { content: "Search Engine Optimization"; }
+}
+
+
+        /*................ Cursor blinking................... */
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /*....... Loop through different courses............................ */
+        .typing-container::after {
+            content: "Digital Marketing";
+            animation: changeText 12s infinite;
+        }
+
+        @keyframes changeText {
+            0%, 33% { content: "Digital Marketing"; }
+            34%, 66% { content: "Web Development"; }
+            67%, 100% { content: "Search Engine Optimization"; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Infinite Animations Demonstration</h1>
+    <div class="container">
+        <!-- Button Hover Animation -->
+        <h2>1. Button Hover Effect</h2>
+        <button class="animated-button">Hover Me</button>
+
+        <!-- Bouncing Animation -->
+        <h2>2. Bouncing Effect</h2>
+        <div class="bounce">Bouncing Text</div>
+
+        <!-- Fade In and Out Animation -->
+        <h2>3. Fade-In & Out Effect</h2>
+        <div class="fade-in">This text fades in and out continuously.</div>
+
+        <!-- Rotating Animation -->
+        <h2>4. Rotating Effect</h2>
+        <div class="rotate">R</div>
+
+        <!-- Typing Text Animation -->
+        <h2>5. Typing Effect</h2>
+        <div class="typing-container"></div>
+    </div>
+
+</body>
+</html>
